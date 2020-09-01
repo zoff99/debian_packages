@@ -1,0 +1,162 @@
+ dpkg-buildpackage -rfakeroot -us -uc
+dpkg-buildpackage: warning: using a gain-root-command while being root
+dpkg-buildpackage: info: source package toxblinkenwall
+dpkg-buildpackage: info: source version 0.99.82-1
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by Zoff <tox@zoff.cc>
+ dpkg-source --before-build toxblinkenwall_0.99.82
+dpkg-buildpackage: info: host architecture amd64
+dpkg-source: warning: unknown information field 'Rules-Requires-Root' in input data in general section of control info file
+ fakeroot debian/rules clean
+dh clean
+   dh_testdir
+   dh_auto_clean
+   dh_autoreconf_clean
+   dh_clean
+	rm -f debian/debhelper-build-stamp
+	rm -f debian/toxblinkenwall.substvars
+	rm -f debian/toxblinkenwall.*.debhelper
+	rm -rf debian/toxblinkenwall/
+	rm -rf debian/.debhelper/
+	rm -f debian/*.debhelper.log
+	rm -f debian/files
+	find .  \( \( \
+		\( -path .\*/.git -o -path .\*/.svn -o -path .\*/.bzr -o -path .\*/.hg -o -path .\*/CVS \) -prune -o -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} + \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} + \) \)
+	rm -f *-stamp
+ dpkg-source -b toxblinkenwall_0.99.82
+dpkg-source: warning: unknown information field 'Rules-Requires-Root' in input data in general section of control info file
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building toxblinkenwall using existing ./toxblinkenwall_0.99.82.orig.tar.gz
+dpkg-source: info: building toxblinkenwall in toxblinkenwall_0.99.82-1.debian.tar.xz
+dpkg-source: info: building toxblinkenwall in toxblinkenwall_0.99.82-1.dsc
+ debian/rules build
+cd toxblinkenwall;gcc -O3 -Wno-unused-variable -fstack-protector-all --param=ssp-buffer-size=1 -fPIC -o toxblinkenwall toxblinkenwall.c rb.c -std=gnu99 -ltoxcore -lsodium -lrt -lm -lX11 -lopus -lvpx -lx264 -lavcodec -lavutil -lswresample -lswscale -lv4lconvert -lasound -lpthread -ldl
+mkdir -p ./usr/bin/
+cp -av toxblinkenwall/toxblinkenwall ./usr/bin/
+'toxblinkenwall/toxblinkenwall' -> './usr/bin/toxblinkenwall'
+ fakeroot debian/rules binary
+dh binary
+   debian/rules build
+make[1]: Entering directory '/script/pkg/toxblinkenwall_0.99.82'
+cd toxblinkenwall;gcc -O3 -Wno-unused-variable -fstack-protector-all --param=ssp-buffer-size=1 -fPIC -o toxblinkenwall toxblinkenwall.c rb.c -std=gnu99 -ltoxcore -lsodium -lrt -lm -lX11 -lopus -lvpx -lx264 -lavcodec -lavutil -lswresample -lswscale -lv4lconvert -lasound -lpthread -ldl
+mkdir -p ./usr/bin/
+cp -av toxblinkenwall/toxblinkenwall ./usr/bin/
+'toxblinkenwall/toxblinkenwall' -> './usr/bin/toxblinkenwall'
+make[1]: Leaving directory '/script/pkg/toxblinkenwall_0.99.82'
+   dh_testdir
+   dh_update_autotools_config
+   dh_autoreconf
+	rm -f debian/*.debhelper.log
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/script/pkg/toxblinkenwall_0.99.82'
+echo "dummy configure" override_dh_auto_configure
+dummy configure override_dh_auto_configure
+make[1]: Leaving directory '/script/pkg/toxblinkenwall_0.99.82'
+   dh_auto_build
+   dh_auto_test
+   create-stamp debian/debhelper-build-stamp
+   dh_testroot
+   dh_prep
+	rm -f debian/toxblinkenwall.substvars
+	rm -f debian/toxblinkenwall.*.debhelper
+	rm -rf debian/toxblinkenwall/
+   dh_auto_install
+	install -d debian/toxblinkenwall
+   dh_install
+	install -d debian/toxblinkenwall//usr/bin
+	cp --reflink=auto -a ./usr/bin/toxblinkenwall debian/toxblinkenwall//usr/bin/
+   dh_installdocs
+	install -d debian/toxblinkenwall/usr/share/doc/toxblinkenwall
+	install -p -m0644 debian/copyright debian/toxblinkenwall/usr/share/doc/toxblinkenwall/copyright
+   dh_installchangelogs
+	install -p -m0644 debian/changelog debian/toxblinkenwall/usr/share/doc/toxblinkenwall/changelog.Debian
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+	cd debian/toxblinkenwall
+	chmod a-x usr/share/doc/toxblinkenwall/changelog.Debian
+	gzip -9nf usr/share/doc/toxblinkenwall/changelog.Debian
+	cd '/script/pkg/toxblinkenwall_0.99.82'
+   dh_fixperms
+	find debian/toxblinkenwall  -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/toxblinkenwall ! -type l  -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/toxblinkenwall/usr/share/doc -type f  ! -regex 'debian/toxblinkenwall/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/toxblinkenwall/usr/share/doc -type d  -print0 2>/dev/null | xargs -0r chmod 0755
+	find debian/toxblinkenwall/usr/share/man -type f  -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/toxblinkenwall/usr/include -type f  -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/toxblinkenwall/usr/share/applications -type f  -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/toxblinkenwall/usr/lib/x86_64-linux-gnu/perl5/5.24 debian/toxblinkenwall/usr/share/perl5 -type f -perm -5 -name '*.pm'  -print0 2>/dev/null | xargs -0r chmod a-X
+	find debian/toxblinkenwall -perm -5 -type f \( -name '*.so.*' -o -name '*.so' -o -name '*.la' -o -name '*.a' -o -name '*.js' -o -name '*.css' -o -name '*.jpeg' -o -name '*.jpg' -o -name '*.png' -o -name '*.gif' -o -name '*.cmxs' \)  -print0 2>/dev/null | xargs -0r chmod 0644
+	find debian/toxblinkenwall/usr/bin -type f  -print0 2>/dev/null | xargs -0r chmod a+x
+	find debian/toxblinkenwall/usr/lib -type f -name '*.ali'  -print0 2>/dev/null | xargs -0r chmod uga-w
+   dh_strip
+	install -d debian/.debhelper/toxblinkenwall/dbgsym-root/usr/lib/debug/.build-id/f3
+	objcopy --only-keep-debug --compress-debug-sections debian/toxblinkenwall/usr/bin/toxblinkenwall debian/.debhelper/toxblinkenwall/dbgsym-root/usr/lib/debug/.build-id/f3/8993c62d3ff13a63e822cf18367042f2220952.debug
+	chmod 0644 -- debian/.debhelper/toxblinkenwall/dbgsym-root/usr/lib/debug/.build-id/f3/8993c62d3ff13a63e822cf18367042f2220952.debug
+	chown 0:0 -- debian/.debhelper/toxblinkenwall/dbgsym-root/usr/lib/debug/.build-id/f3/8993c62d3ff13a63e822cf18367042f2220952.debug
+	strip --remove-section=.comment --remove-section=.note debian/toxblinkenwall/usr/bin/toxblinkenwall
+	objcopy --add-gnu-debuglink debian/.debhelper/toxblinkenwall/dbgsym-root/usr/lib/debug/.build-id/f3/8993c62d3ff13a63e822cf18367042f2220952.debug debian/toxblinkenwall/usr/bin/toxblinkenwall
+	install -d debian/.debhelper/toxblinkenwall/dbgsym-root/usr/share/doc
+	ln -s toxblinkenwall debian/.debhelper/toxblinkenwall/dbgsym-root/usr/share/doc/toxblinkenwall-dbgsym
+   dh_makeshlibs
+	rm -f debian/toxblinkenwall/DEBIAN/shlibs
+   dh_shlibdeps
+	install -d debian/toxblinkenwall/DEBIAN
+	dpkg-shlibdeps -Tdebian/toxblinkenwall.substvars debian/toxblinkenwall/usr/bin/toxblinkenwall
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/toxblinkenwall/usr/bin/toxblinkenwall was not linked against libopus.so.0 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/toxblinkenwall/usr/bin/toxblinkenwall was not linked against libavutil.so.55 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/toxblinkenwall/usr/bin/toxblinkenwall was not linked against libx264.so.148 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/toxblinkenwall/usr/bin/toxblinkenwall was not linked against libavcodec.so.57 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/toxblinkenwall/usr/bin/toxblinkenwall was not linked against libdl.so.2 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/toxblinkenwall/usr/bin/toxblinkenwall was not linked against libswscale.so.4 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/toxblinkenwall/usr/bin/toxblinkenwall was not linked against libswresample.so.2 (it uses none of the library's symbols)
+   dh_installdeb
+   dh_gencontrol
+	echo misc:Depends= >> debian/toxblinkenwall.substvars
+	echo misc:Pre-Depends= >> debian/toxblinkenwall.substvars
+	install -d debian/.debhelper/toxblinkenwall/dbgsym-root/DEBIAN
+	dpkg-gencontrol -ptoxblinkenwall -ldebian/changelog -Tdebian/toxblinkenwall.substvars -Pdebian/.debhelper/toxblinkenwall/dbgsym-root -UPre-Depends -URecommends -USuggests -UEnhances -UProvides -UEssential -UConflicts -DPriority=extra -DAuto-Built-Package=debug-symbols -DPackage=toxblinkenwall-dbgsym "-DDepends=toxblinkenwall (= \${binary:Version})" "-DDescription=Debug symbols for toxblinkenwall" -DBuild-Ids=f38993c62d3ff13a63e822cf18367042f2220952 -DSection=debug -UReplaces -UBreaks
+dpkg-gencontrol: warning: unknown information field 'Rules-Requires-Root' in input data in general section of control info file
+	chmod 0644 -- debian/.debhelper/toxblinkenwall/dbgsym-root/DEBIAN/control
+	chown 0:0 -- debian/.debhelper/toxblinkenwall/dbgsym-root/DEBIAN/control
+	dpkg-gencontrol -ptoxblinkenwall -ldebian/changelog -Tdebian/toxblinkenwall.substvars -Pdebian/toxblinkenwall
+dpkg-gencontrol: warning: unknown information field 'Rules-Requires-Root' in input data in general section of control info file
+	chmod 0644 -- debian/toxblinkenwall/DEBIAN/control
+	chown 0:0 -- debian/toxblinkenwall/DEBIAN/control
+   dh_md5sums
+	(cd debian/toxblinkenwall >/dev/null ; find . -type f  ! -regex './DEBIAN/.*' -printf '%P\0' | LC_ALL=C sort -z | xargs -r0 md5sum | perl -pe 'if (s@^\\@@) { s/\\\\/\\/g; }' > DEBIAN/md5sums) >/dev/null
+	chmod 0644 -- debian/toxblinkenwall/DEBIAN/md5sums
+	chown 0:0 -- debian/toxblinkenwall/DEBIAN/md5sums
+	(cd debian/.debhelper/toxblinkenwall/dbgsym-root >/dev/null ; find . -type f ! -regex './DEBIAN/.*' -printf '%P\0' | LC_ALL=C sort -z | xargs -r0 md5sum | perl -pe 'if (s@^\\@@) { s/\\\\/\\/g; }' > DEBIAN/md5sums) >/dev/null
+	chmod 0644 -- debian/.debhelper/toxblinkenwall/dbgsym-root/DEBIAN/md5sums
+	chown 0:0 -- debian/.debhelper/toxblinkenwall/dbgsym-root/DEBIAN/md5sums
+   dh_builddeb
+	dpkg-deb -z1 -Zxz -Sextreme --build debian/.debhelper/toxblinkenwall/dbgsym-root ..
+dpkg-deb: building package 'toxblinkenwall-dbgsym' in '../toxblinkenwall-dbgsym_0.99.82-1_amd64.deb'.
+	dpkg-deb --build debian/toxblinkenwall ..
+dpkg-deb: building package 'toxblinkenwall' in '../toxblinkenwall_0.99.82-1_amd64.deb'.
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../toxblinkenwall_0.99.82-1_amd64.changes
+dpkg-genchanges: warning: unknown information field 'Rules-Requires-Root' in input data in general section of control info file
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build toxblinkenwall_0.99.82
+dpkg-source: warning: unknown information field 'Rules-Requires-Root' in input data in general section of control info file
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian...
+warning: the authors of lintian do not recommend running it with root privileges!
+W: toxblinkenwall source: package-needs-versioned-debhelper-build-depends 10
+W: toxblinkenwall source: newer-standards-version 4.3.0 (current is 3.9.8)
+E: toxblinkenwall: arch-dependent-file-not-in-arch-specific-directory usr/bin/toxblinkenwall
+W: toxblinkenwall: debian-changelog-has-wrong-day-of-week 2020-08-23 is a Sunday
+W: toxblinkenwall: new-package-should-close-itp-bug
+W: toxblinkenwall: copyright-without-copyright-notice
+W: toxblinkenwall: binary-without-manpage usr/bin/toxblinkenwall
+W: toxblinkenwall-dbgsym: debug-file-with-no-debug-symbols usr/lib/debug/.build-id/f3/8993c62d3ff13a63e822cf18367042f2220952.debug
+Finished running lintian.

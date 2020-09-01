@@ -1,0 +1,37 @@
+Format: 1.8
+Date: Fri, 23 Aug 2020 23:23:23 +0400
+Source: toxblinkenwall
+Binary: toxblinkenwall
+Architecture: source amd64
+Version: 0.99.82-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Zoff <tox@zoff.cc>
+Changed-By: Zoff <tox@zoff.cc>
+Description:
+ toxblinkenwall - Distributed, secure messenger
+Changes:
+ toxblinkenwall (0.99.82-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ 9b4de2b0878b7c6f2a817d597f70f408c32b3021 1262 toxblinkenwall_0.99.82-1.dsc
+ ffa38c8620683ff3fafca781a5e0e7f3c9c7692a 4341120 toxblinkenwall_0.99.82.orig.tar.gz
+ 83109adfee5cd2c7c21db5513b9c27e938730260 2192 toxblinkenwall_0.99.82-1.debian.tar.xz
+ aef30bc37c38c4d174d71a0c77eac30a7cfb7aa3 12112 toxblinkenwall-dbgsym_0.99.82-1_amd64.ddeb
+ d4a4a2f127e61aa410a1ce20c3a7314c5747d6cf 9011 toxblinkenwall_0.99.82-1_amd64.buildinfo
+ 42db17ff63aa57cc5e9647e5511ac8cdfd2267fa 88636 toxblinkenwall_0.99.82-1_amd64.deb
+Checksums-Sha256:
+ d2c0ae9bab447796d92c1a01662e4c6a5c2086085daab62cfaf02a3f03107f17 1262 toxblinkenwall_0.99.82-1.dsc
+ c87d679cd15a996e939fdc0bf019ddd2048ae3cd9d5325e42c0f974ae2253b82 4341120 toxblinkenwall_0.99.82.orig.tar.gz
+ d124fbc2549eb6bd84287c180abc13caf6f8a95fae925979abc6aa88e610cbde 2192 toxblinkenwall_0.99.82-1.debian.tar.xz
+ 1e6db5ef6fa84b8400ab4157ded592464c32a1fd4fb10f94387976f9def536a3 12112 toxblinkenwall-dbgsym_0.99.82-1_amd64.ddeb
+ 10e9633730f57594ae95713c415b2be6b5caa997e48f4c27a984794c0418868c 9011 toxblinkenwall_0.99.82-1_amd64.buildinfo
+ 233aa95752747e88c69e28c5cd1cff83c3bad60a5a76859e9c5728acbbfeb53c 88636 toxblinkenwall_0.99.82-1_amd64.deb
+Files:
+ 486daf3940d7945b62fb7e0cec3cb96b 1262 libs optional toxblinkenwall_0.99.82-1.dsc
+ cb0cf3045dfbf079dee3870be128f110 4341120 libs optional toxblinkenwall_0.99.82.orig.tar.gz
+ 47dfff32cb3ad7f48fb5acb8203c5c3d 2192 libs optional toxblinkenwall_0.99.82-1.debian.tar.xz
+ 6ef87a1b59674c92bea0935dc9be2c45 12112 debug optional toxblinkenwall-dbgsym_0.99.82-1_amd64.ddeb
+ 817df95d8d7d5b93f2fd87c52d753b45 9011 libs optional toxblinkenwall_0.99.82-1_amd64.buildinfo
+ 7293a8ce8183ac9a1eb21f140cf43415 88636 libs optional toxblinkenwall_0.99.82-1_amd64.deb

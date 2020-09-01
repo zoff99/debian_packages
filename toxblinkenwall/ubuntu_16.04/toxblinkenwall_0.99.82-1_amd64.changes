@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Fri, 23 Aug 2020 23:23:23 +0400
+Source: toxblinkenwall
+Binary: toxblinkenwall
+Architecture: source amd64
+Version: 0.99.82-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Zoff <tox@zoff.cc>
+Changed-By: Zoff <tox@zoff.cc>
+Description:
+ toxblinkenwall - Distributed, secure messenger
+Changes:
+ toxblinkenwall (0.99.82-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ 890a2b02a42271497bba9f067076c3a0f183e2b7 1262 toxblinkenwall_0.99.82-1.dsc
+ ffa38c8620683ff3fafca781a5e0e7f3c9c7692a 4341120 toxblinkenwall_0.99.82.orig.tar.gz
+ ba2ed5b1d0dbc1bec0f930544f34d5c4eec5509c 2192 toxblinkenwall_0.99.82-1.debian.tar.xz
+ 6ea041f32f48fdef0a97f49e01dbff3983833650 86562 toxblinkenwall_0.99.82-1_amd64.deb
+Checksums-Sha256:
+ 320a9eb1210f5f7ceb1056bc43bfcd4ed088cc1db3994e67ef40cdcd6fff0749 1262 toxblinkenwall_0.99.82-1.dsc
+ c87d679cd15a996e939fdc0bf019ddd2048ae3cd9d5325e42c0f974ae2253b82 4341120 toxblinkenwall_0.99.82.orig.tar.gz
+ ac1109447e88154546e48ae1bd9e511a0c726016d7a57124df51375e4d0cf075 2192 toxblinkenwall_0.99.82-1.debian.tar.xz
+ f177aa6716a9401c2a5b172a6a5b417baee7231efd01127a88e6c358fc5fd5bc 86562 toxblinkenwall_0.99.82-1_amd64.deb
+Files:
+ 3090abcc96830933c9c30d8696acaf2e 1262 libs optional toxblinkenwall_0.99.82-1.dsc
+ cb0cf3045dfbf079dee3870be128f110 4341120 libs optional toxblinkenwall_0.99.82.orig.tar.gz
+ f4674ba3d42eed8897cb1b0f1fdf7545 2192 libs optional toxblinkenwall_0.99.82-1.debian.tar.xz
+ 27f057fbcb86dc18427c7e047904df7a 86562 libs optional toxblinkenwall_0.99.82-1_amd64.deb
