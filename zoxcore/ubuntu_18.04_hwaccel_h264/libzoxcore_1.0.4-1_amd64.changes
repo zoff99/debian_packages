@@ -1,0 +1,41 @@
+Format: 1.8
+Date: Sun, 13 Dec 2020 23:24:24 +0400
+Source: libzoxcore
+Binary: libzoxcore2 libzoxcore-dev
+Architecture: source amd64
+Version: 1.0.4-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Zoff <tox@zoff.cc>
+Changed-By: Zoff <tox@zoff.cc>
+Description:
+ libzoxcore-dev - Distributed, secure messenger - development headers
+ libzoxcore2 - Distributed, secure messenger
+Changes:
+ libzoxcore (1.0.4-1) UNRELEASED; urgency=medium
+ .
+   * New upstream release (remove h264 encoder h264_vaapi)
+Checksums-Sha1:
+ 50de3116a0e22fc793f1945f8bdc1440711094bb 1117 libzoxcore_1.0.4-1.dsc
+ cdfab5040e117ede8ed33f4f91645380ee149f54 599947 libzoxcore_1.0.4.orig.tar.gz
+ c3e677f0d2cbfcb37320f80a00c0a6cab88a8149 1424 libzoxcore_1.0.4-1.debian.tar.xz
+ 31d707ffdf012f58ad0d0c2a3014aa3a30300e32 193692 libzoxcore-dev_1.0.4-1_amd64.deb
+ 791f105dd365bc894c3c6d00602182a4257aa58f 543272 libzoxcore2-dbgsym_1.0.4-1_amd64.ddeb
+ d5b6866c787a458595d11b8797f6a3e328bcdd1c 154300 libzoxcore2_1.0.4-1_amd64.deb
+ 44ec380f8b77d70a532c4cc7a28f3828658a1cca 10232 libzoxcore_1.0.4-1_amd64.buildinfo
+Checksums-Sha256:
+ c58a6d3a0a35a791ee05f49f8ef46c780d381d1ba4a13e7ab4bbe0778d31de1e 1117 libzoxcore_1.0.4-1.dsc
+ 359e33d27a2fe4488f6c154b60094539a6b5ad9a4b78f872ee83e6664a630a87 599947 libzoxcore_1.0.4.orig.tar.gz
+ 88a8fa729c265fe3cbda0348e7f6281a9a79ee230a3f3a963e425dd3daf649dd 1424 libzoxcore_1.0.4-1.debian.tar.xz
+ 072afa4e7abb42be2aa48363c3a7365192dc70cbaf9fe46e6cff831995178bc8 193692 libzoxcore-dev_1.0.4-1_amd64.deb
+ f20969dc748cbaa7aa4a00b435435ed961cbd0417f0cf19de71d961614d4e1bc 543272 libzoxcore2-dbgsym_1.0.4-1_amd64.ddeb
+ 3173c6211e469ab39f78c2104c428aeb28231c36cf1e800c67d4f9be6300de3a 154300 libzoxcore2_1.0.4-1_amd64.deb
+ fff0caf3c4c5a095756ab8990cc438dd0f17ed216f7a870d039153b92b930430 10232 libzoxcore_1.0.4-1_amd64.buildinfo
+Files:
+ 8a27098fd201c3b37e12a549ce495af6 1117 libs optional libzoxcore_1.0.4-1.dsc
+ 03b98ea52d16a5825ebf64ccdf82ce58 599947 libs optional libzoxcore_1.0.4.orig.tar.gz
+ 5068458d12e88c81a6cd98d0d6e2a6c9 1424 libs optional libzoxcore_1.0.4-1.debian.tar.xz
+ 2d6268c34f70efbb9d323ef2f6291f74 193692 libdevel optional libzoxcore-dev_1.0.4-1_amd64.deb
+ 99f429a708606f40d9f2758ad9ed2467 543272 debug optional libzoxcore2-dbgsym_1.0.4-1_amd64.ddeb
+ a68d31557efeb7443e8d126f56e1190d 154300 libs optional libzoxcore2_1.0.4-1_amd64.deb
+ 5a30e50408d1b6f89ae3b789da381989 10232 libs optional libzoxcore_1.0.4-1_amd64.buildinfo

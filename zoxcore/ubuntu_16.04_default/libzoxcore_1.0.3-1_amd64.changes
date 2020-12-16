@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Sun, 20 Sep 2020 23:24:24 +0400
+Source: libzoxcore
+Binary: libzoxcore2 libzoxcore-dev
+Architecture: source amd64
+Version: 1.0.3-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Zoff <tox@zoff.cc>
+Changed-By: Zoff <tox@zoff.cc>
+Description:
+ libzoxcore-dev - Distributed, secure messenger - development headers
+ libzoxcore2 - Distributed, secure messenger
+Changes:
+ libzoxcore (1.0.3-1) UNRELEASED; urgency=medium
+ .
+   * New upstream release (pts callback for incoming audio)
+Checksums-Sha1:
+ 0a43828bc7e9d0cfe14c5fbfbcd8c8c8bed61cd8 1117 libzoxcore_1.0.3-1.dsc
+ 7f4c4fa4de0770e85f857400fa1d2293360a2e6d 717236 libzoxcore_1.0.3.orig.tar.gz
+ b68dc7de9a2a723b81feb6847538f1264acd55b3 1380 libzoxcore_1.0.3-1.debian.tar.xz
+ cc8297906a8730f155554220a2f022b4a1015276 195542 libzoxcore-dev_1.0.3-1_amd64.deb
+ c26d68ef24328f1c06a451a12f6280ba5e648302 154902 libzoxcore2_1.0.3-1_amd64.deb
+Checksums-Sha256:
+ 3f132f7c6cbea1ebf9aaa312d677e40ea4b7db030401215b293fefb6cf1eebb2 1117 libzoxcore_1.0.3-1.dsc
+ 66d6b4ac94731e490c5bbb892c4008e21064cbef2d2a391ff921fccedc243b07 717236 libzoxcore_1.0.3.orig.tar.gz
+ 513b6dd4853b1519c29b2d60c8c7eb05ae57a189b1aca0e3af46ff205c76db38 1380 libzoxcore_1.0.3-1.debian.tar.xz
+ f2307bc1623869bf909b8d2c30ca042aa86d25a3d0343ca4eedbd6ffdf541e33 195542 libzoxcore-dev_1.0.3-1_amd64.deb
+ 3a09919e200a66712cf78e6a633d4e974ae83da7059df5198ad03263592b4dd4 154902 libzoxcore2_1.0.3-1_amd64.deb
+Files:
+ 3450dd0a4cef5e0baf3a31f00574818d 1117 libs optional libzoxcore_1.0.3-1.dsc
+ be44d2b017cf32d48bf652bd1a688c0f 717236 libs optional libzoxcore_1.0.3.orig.tar.gz
+ 5875b37af9edf69cd03c7c2d3df1cac9 1380 libs optional libzoxcore_1.0.3-1.debian.tar.xz
+ f7055e5b2746ee387c3d0e926e7f918d 195542 libdevel optional libzoxcore-dev_1.0.3-1_amd64.deb
+ 53417be434059dec4b619699bbcd5d3c 154902 libs optional libzoxcore2_1.0.3-1_amd64.deb
