@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Sun, 28 Feb 2021 23:24:24 +0400
+Source: libzoxcore
+Binary: libzoxcore2 libzoxcore-dev
+Architecture: source amd64
+Version: 1.0.5-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Zoff <tox@zoff.cc>
+Changed-By: Zoff <tox@zoff.cc>
+Description:
+ libzoxcore-dev - Distributed, secure messenger - development headers
+ libzoxcore2 - Distributed, secure messenger
+Changes:
+ libzoxcore (1.0.5-1) UNRELEASED; urgency=medium
+ .
+   * New upstream release (remove h264 encoder h264_vaapi)
+Checksums-Sha1:
+ fcf43a2129ecf78b5cb9f0c3fd0952a6082386c3 1117 libzoxcore_1.0.5-1.dsc
+ 1961c5422d8d429ecdf1ff5e9a70961ecf06e83b 597659 libzoxcore_1.0.5.orig.tar.gz
+ 553b047211a3c1d9858abbb43f246d1e04b29cba 1420 libzoxcore_1.0.5-1.debian.tar.xz
+ 43ae0f547af3f9357c83453aaf9ed0e646585424 196462 libzoxcore-dev_1.0.5-1_amd64.deb
+ 5dec632cabc04dec81d6958fac45becc22ac18a6 155488 libzoxcore2_1.0.5-1_amd64.deb
+Checksums-Sha256:
+ 08488dab2def8984c632f156cc7cde3cf71c54e852194416437d5cffca2bf35d 1117 libzoxcore_1.0.5-1.dsc
+ 64070785d869d53f9b1ff9de59d76af5b1c53fc39bd3f8e8ea9c5224b6ada895 597659 libzoxcore_1.0.5.orig.tar.gz
+ 9c646b12235e462213dba7a83d6711cae4f61456c61572c50ced78f4f5a746cc 1420 libzoxcore_1.0.5-1.debian.tar.xz
+ dcdd62365c45fce7316b298a32470cb20cb56a38b67dec53e28b0c7c3e028fd9 196462 libzoxcore-dev_1.0.5-1_amd64.deb
+ 632afff20c3bb62a6f3968c8825865492cd9035fe2f32925a693948fb78d3325 155488 libzoxcore2_1.0.5-1_amd64.deb
+Files:
+ 9962f5ed78ccf8a27b8acfdd9f3a91d7 1117 libs optional libzoxcore_1.0.5-1.dsc
+ fd033036dcef90788c71e01fd6048a60 597659 libs optional libzoxcore_1.0.5.orig.tar.gz
+ cb0f8f7a973cc7e9a79226d9b998e01b 1420 libs optional libzoxcore_1.0.5-1.debian.tar.xz
+ 92a836f1b59cfd5fb0dfb07c57b782e6 196462 libdevel optional libzoxcore-dev_1.0.5-1_amd64.deb
+ e546e916022540e21762b136c5d52bc9 155488 libs optional libzoxcore2_1.0.5-1_amd64.deb
